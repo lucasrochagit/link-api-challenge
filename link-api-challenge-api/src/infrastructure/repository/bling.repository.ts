@@ -23,11 +23,12 @@ export class BlingRepository {
     const xmlOrder = this._xml_converter
       .render(order)
       .replace(/items/gi, 'itens');
-    const url = `${this._bling_url}/pedido/json?apikey=${this._api_key}&xml=${xmlOrder}`;
+    const url = `${this._bling_url}/pedido/json`;
+    const params = { apikey: this._api_key, xml: xmlOrder };
 
     return new Promise<void>((resolve, reject) => {
       axios
-        .post(url)
+        .post(url, null, { params })
         .then((res) => {
           if (res.data?.retorno?.erros) {
             return reject(this.parseError(res));
