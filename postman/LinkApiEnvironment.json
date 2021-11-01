@@ -1,0 +1,14 @@
+{
+	"id": "54345b0c-cdf1-4b16-805e-072de6908a6d",
+	"name": "Link API Environment",
+	"values": [
+		{
+			"key": "host",
+			"value": "http://localhost:3000",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2021-11-01T07:07:56.710Z",
+	"_postman_exported_using": "Postman/8.12.5"
+}

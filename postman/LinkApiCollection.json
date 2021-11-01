@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "63d17227-9111-4b67-8959-92a4b3b07c7e",
+		"name": "Link API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Deals",
+			"item": [
+				{
+					"name": "Find",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/deals",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"deals"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/deals",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"deals"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Total-Count",
+									"value": "1"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "609"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"261-yLNWqs0moNJoZWDPHR+QamMqmUg\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Nov 2021 06:28:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"value\": 242.5,\n        \"products\": [\n            {\n                \"name\": \"Banana\",\n                \"quantity\": 50,\n                \"item_price\": 0.3\n            },\n            {\n                \"name\": \"Apple\",\n                \"quantity\": 50,\n                \"item_price\": 0.5\n            },\n            {\n                \"name\": \"Guava\",\n                \"quantity\": 50,\n                \"item_price\": 0.5\n            },\n            {\n                \"name\": \"Kiwi\",\n                \"quantity\": 25,\n                \"item_price\": 1.5\n            },\n            {\n                \"name\": \"Carrot\",\n                \"quantity\": 100,\n                \"item_price\": 0.5\n            },\n            {\n                \"name\": \"Lettuce\",\n                \"quantity\": 50,\n                \"item_price\": 1\n            },\n            {\n                \"name\": \"Tomato\",\n                \"quantity\": 100,\n                \"item_price\": 0.25\n            },\n            {\n                \"name\": \"Onion\",\n                \"quantity\": 50,\n                \"item_price\": 0.3\n            }\n        ],\n        \"client\": {\n            \"name\": \"Jane Doe\",\n            \"phone\": \"88988887654\",\n            \"email\": \"janedoe@mail.com\"\n        },\n        \"date\": \"2021-11-01\",\n        \"deal_id\": 4,\n        \"created_at\": \"2021-11-01T05:26:08.576Z\",\n        \"updated_at\": \"2021-11-01T05:26:08.576Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Aggregate Deals From Date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/deals/:date/aggregate",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"deals",
+								":date",
+								"aggregate"
+							],
+							"variable": [
+								{
+									"key": "date",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/deals/2021-11-01/aggregate",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"deals",
+										"2021-11-01",
+										"aggregate"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "53"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"35-HrHzbuOitR2hbUEQ5HolcJO6DCg\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Nov 2021 06:23:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"total_value\": 242.5,\n        \"count\": 1,\n        \"date\": \"2021-11-01\"\n    }\n]"
+						}
+					]
+				}
+			]
+		}
+	]
+}
